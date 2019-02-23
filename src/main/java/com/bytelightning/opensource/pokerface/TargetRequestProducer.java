@@ -97,8 +97,8 @@ public class TargetRequestProducer extends TargetBase implements HttpAsyncReques
 		}
 		else
 			pathSuffix = reqLine.getUri();
-		// Build the fully qualified remote Target URI.
-		String newUri = targetDesc.getTarget().toURI() + targetDesc.getTargetPath() + pathSuffix;
+		// Build the remote Target URI.
+		String newUri = targetDesc.getTargetPath() + pathSuffix;
 		// Rewrite request!!!!
 		HttpRequest retVal;
 		if (clientRequest instanceof HttpEntityEnclosingRequest) {
